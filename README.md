@@ -7,21 +7,34 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## About SPI
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+SPI is an IPM Cadre System Application that provides features to simplify the management of the cadre system and administratively by using the curriculum method from the IPM cadre implementation guidebook.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The features available are:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Ability to determine learning methods.
+- Ability to determine and manage organization
+in cadre.
+-  Ability to monitor cadre evaluation in real time.
+-  Ability to make a decision.
+-  Print activity reports.
+-  Manage accounts.
 
-## Learning Laravel
+
+System design documentation can be seen by looking at it -> [Documentation](https://drive.google.com/file/d/1HKFova_CMbcLigppQmAYHgl7BAHIT8iu/view?usp=sharing)
+
+orderly worship, orderly organization, and orderly study.
+
+## SPI installation
+
+## windows
+
+- open cmd, then type command
+
+```
+git clone https://github.com/hadiid-studentcode/sipipm.git
+```
 
 Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
