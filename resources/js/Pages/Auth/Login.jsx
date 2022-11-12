@@ -49,15 +49,17 @@ function App() {
 
                             <MDBInput
                                 wrapperClass="mb-4"
-                                label="Email address"
-                                id="formControlLg"
+                                label="NBA"
+                                id="nba"
+                                name="nba"
                                 type="email"
                                 size="lg"
                             />
                             <MDBInput
                                 wrapperClass="mb-4"
-                                label="Password"
-                                id="formControlLg"
+                                label="PASSWORD"
+                                id="password"
+                                name="password"
                                 type="password"
                                 size="lg"
                             />
