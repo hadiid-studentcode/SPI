@@ -11,28 +11,33 @@ import {
     MDBInput,
 } from "mdb-react-ui-kit";
 
+import Logo from "../../../img/Logo.png";
+import Ipm from "../../../img/ipm.png";
+
 function App() {
     return (
         <MDBContainer className="my-5">
             <MDBCard>
                 <MDBRow className="g-0">
-                    <MDBCol md="6">
+                    <MDBCol md="6" style={{ backgroundColor: "#FFB200" }}>
                         <MDBCardImage
-                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                            src={Logo}
                             alt="login form"
                             className="rounded-start w-100"
                         />
                     </MDBCol>
 
                     <MDBCol md="6">
-                        <MDBCardBody className="d-flex flex-column">
+                        <MDBCardBody className="d-flex flex-column ">
                             <div className="d-flex flex-row mt-2">
-                                <MDBIcon
-                                    fas
-                                    icon="cubes fa-3x me-3"
-                                    style={{ color: "#ff6219" }}
+                                <MDBCardImage
+                                    src={Ipm}
+                                    alt="login form"
+                                    className="rounded-start w-20"
                                 />
-                                <span className="h1 fw-bold mb-0">Logo</span>
+                                <span className="h1 fw-bold mb-0">
+                                    Ikatan Pelajar Muhammadiyah
+                                </span>
                             </div>
 
                             <h5
