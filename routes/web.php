@@ -15,6 +15,7 @@ use Inertia\Inertia;
 |
 */
 
+// test
 
 Route::get('/', function () {
    return redirect('/login');
