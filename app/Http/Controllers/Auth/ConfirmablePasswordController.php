@@ -29,6 +29,9 @@ class ConfirmablePasswordController extends Controller
      */
     public function store(Request $request)
     {
+
+       dd('masuk');
+
         if (! Auth::guard('web')->validate([
             'email' => $request->user()->email,
             'password' => $request->password,
