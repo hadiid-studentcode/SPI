@@ -1,112 +1,96 @@
-import React, { useEffect } from "react";
-import Checkbox from "@/Components/Checkbox";
-import GuestLayout from "@/Layouts/GuestLayout";
-import InputError from "@/Components/InputError";
-import InputLabel from "@/Components/InputLabel";
-import PrimaryButton from "@/Components/PrimaryButton";
-import TextInput from "@/Components/TextInput";
-import { Head, Link, useForm } from "@inertiajs/inertia-react";
+import React from "react";
+import {
+    MDBBtn,
+    MDBContainer,
+    MDBCard,
+    MDBCardBody,
+    MDBCardImage,
+    MDBRow,
+    MDBCol,
+    MDBIcon,
+    MDBInput,
+} from "mdb-react-ui-kit";
 
-export default function Login({ status, canResetPassword }) {
-    const { data, setData, post, processing, errors, reset } = useForm({
-        nba: "",
-        password: "",
-        remember: "",
-    });
-
-    // updated
-    useEffect(() => {
-        return () => {
-            reset("password");
-        };
-    }, []);
-
-    const onHandleChange = (event) => {
-        setData(
-            event.target.name,
-            event.target.type === "checkbox"
-                ? event.target.checked
-                : event.target.value
-        );
-    };
-
-    const submit = (e) => {
-        e.preventDefault();
-
-        post(route("login"));
-    };
-
+function App() {
     return (
-        <GuestLayout>
-            <Head title="Log in" />
-
-            {status && (
-                <div className="mb-4 font-medium text-sm text-green-600">
-                    {status}
-                </div>
-            )}
-
-            <form onSubmit={submit}>
-                <div>
-                    <InputLabel forInput="nba" value="nba" />
-
-                    <TextInput
-                        type="number"
-                        name="nba"
-                        value={data.nba}
-                        className="mt-1 block w-full"
-                        autoComplete="nba"
-                        isFocused={true}
-                        handleChange={onHandleChange}
-                    />
-
-                    <InputError message={errors.nba} className="mt-2" />
-                </div>
-
-                <div className="mt-4">
-                    <InputLabel forInput="password" value="Password" />
-
-                    <TextInput
-                        type="password"
-                        name="password"
-                        value={data.password}
-                        className="mt-1 block w-full"
-                        autoComplete="current-password"
-                        handleChange={onHandleChange}
-                    />
-
-                    <InputError message={errors.password} className="mt-2" />
-                </div>
-
-                <div className="block mt-4">
-                    <label className="flex items-center">
-                        <Checkbox
-                            name="remember"
-                            value={data.remember}
-                            handleChange={onHandleChange}
+        <MDBContainer className="my-5">
+            <MDBCard>
+                <MDBRow className="g-0">
+                    <MDBCol md="6">
+                        <MDBCardImage
+                            src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                            alt="login form"
+                            className="rounded-start w-100"
                         />
+                    </MDBCol>
 
-                        <span className="ml-2 text-sm text-gray-600">
-                            Remember me
-                        </span>
-                    </label>
-                </div>
+                    <MDBCol md="6">
+                        <MDBCardBody className="d-flex flex-column">
+                            <div className="d-flex flex-row mt-2">
+                                <MDBIcon
+                                    fas
+                                    icon="cubes fa-3x me-3"
+                                    style={{ color: "#ff6219" }}
+                                />
+                                <span className="h1 fw-bold mb-0">Logo</span>
+                            </div>
 
-                <div className="flex items-center justify-end mt-4">
-                    {canResetPassword && (
-                        <Link
-                            href={route("password.request")}
-                            className="underline text-sm text-gray-600 hover:text-gray-900"
-                        >
-                            Forgot your password?
-                        </Link>
-                    )}
+                            <h5
+                                className="fw-normal my-4 pb-3"
+                                style={{ letterSpacing: "1px" }}
+                            >
+                                Sign into your account
+                            </h5>
 
-                    <PrimaryButton className="ml-4" processing={processing}>
-                        Log in
-                    </PrimaryButton>
-                </div>
-            </form>
-        </GuestLayout>
+                            <MDBInput
+                                wrapperClass="mb-4"
+                                label="Email address"
+                                id="formControlLg"
+                                type="email"
+                                size="lg"
+                            />
+                            <MDBInput
+                                wrapperClass="mb-4"
+                                label="Password"
+                                id="formControlLg"
+                                type="password"
+                                size="lg"
+                            />
+
+                            <MDBBtn
+                                className="mb-4 px-5"
+                                color="dark"
+                                size="lg"
+                            >
+                                Login
+                            </MDBBtn>
+                            <a className="small text-muted" href="#!">
+                                Forgot password?
+                            </a>
+                            <p
+                                className="mb-5 pb-lg-2"
+                                style={{ color: "#393f81" }}
+                            >
+                                Don't have an account?{" "}
+                                <a href="#!" style={{ color: "#393f81" }}>
+                                    Register here
+                                </a>
+                            </p>
+
+                            <div className="d-flex flex-row justify-content-start">
+                                <a href="#!" className="small text-muted me-1">
+                                    Terms of use.
+                                </a>
+                                <a href="#!" className="small text-muted">
+                                    Privacy policy
+                                </a>
+                            </div>
+                        </MDBCardBody>
+                    </MDBCol>
+                </MDBRow>
+            </MDBCard>
+        </MDBContainer>
     );
 }
+
+export default App;

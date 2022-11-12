@@ -5,8 +5,7 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
 
-// hello world
-// add comment
+
 
 /*
 |--------------------------------------------------------------------------
