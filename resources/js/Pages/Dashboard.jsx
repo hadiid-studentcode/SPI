@@ -8,6 +8,9 @@ import Sidebar from '@/Components/Sidebar';
 
 export default function Dashboard(props) {
     return (
+
+        // dashboard milik laravel
+
         // <AuthenticatedLayout
         //     auth={props.auth}
         //     errors={props.errors}
@@ -23,6 +26,8 @@ export default function Dashboard(props) {
         //         </div>
         //     </div>
         // </AuthenticatedLayout>
+
+        // dashboard punya laravel 
 
         <>
         <Head title='Dashboard' />
