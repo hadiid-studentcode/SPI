@@ -1,8 +1,10 @@
 import React from 'react';
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
-import { Head } from '@inertiajs/inertia-react';
+import { Head, Link } from '@inertiajs/inertia-react';
 import Header from '@/Components/Header';
 import Sidebar from '@/Components/Sidebar';
+import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+
 
 
 
@@ -27,12 +29,24 @@ export default function Dashboard(props) {
         //     </div>
         // </AuthenticatedLayout>
 
-        // dashboard punya laravel 
+        // dashboard punya laravel
 
         <>
-        <Head title='Dashboard' />
-        <Header/>
-        <Sidebar/>
+            <Head title='Dashboard' />
+            <Header />
+            <Sidebar />
+
+
+
+
+
+
+            {/* Akses backend */}
+            <hr />
+            <ResponsiveNavLink method="post" href={route('logout')} as="button" active="true">
+                Log Out
+            </ResponsiveNavLink>
+            {/* Akses backend */}
 
 
 
