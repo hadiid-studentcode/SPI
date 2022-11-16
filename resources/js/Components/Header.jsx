@@ -10,14 +10,18 @@ import {
 } from '@coreui/react'
 import { HiViewList, HiMenu, HiOutlineBell, HiOutlineChatAlt } from "react-icons/hi";
 import AppHeaderDropdown from './AppHeaderDropdown';
+import AppBreadcrumb from './AppBreadcrumb';
 
 
 
-export default function Header() {
+export default function Header(props) {
     const [visible, setVisible] = useState(false)
 
     // const dispatch = useDispatch()
     // const sidebarShow = useSelector((state) => state.sidebarShow)
+
+    console.log(props.get);
+    const title = props.get;
 
     return (
 
@@ -69,7 +73,7 @@ export default function Header() {
                 </CContainer>
                 <CHeaderDivider />
                 <CContainer fluid>
-                    {/* <AppBreadcrumb /> */}  breadcump
+                    <AppBreadcrumb get={title}/>
                 </CContainer>
             </CHeader>
         </>
