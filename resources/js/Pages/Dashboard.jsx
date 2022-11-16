@@ -5,6 +5,11 @@ import Header from '@/Components/Header';
 import Sidebar from '@/Components/Sidebar';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
 
+import {
+
+    CRow, CCol
+
+} from '@coreui/react'
 
 
 
@@ -33,20 +38,34 @@ export default function Dashboard(props) {
 
         <>
             <Head title='Dashboard' />
-            <Header />
-            <Sidebar />
 
 
 
 
+
+            <CRow>
+
+                <CCol xs={'auto'}>
+                    <Sidebar />
+                </CCol>
+                <CCol xs>
+                    <Header />
+                    <div >
+                        <ResponsiveNavLink method="post" href={route('logout')} as="button" active="true">
+                            Log Out
+                        </ResponsiveNavLink>
+
+                    </div>
+                </CCol>
+            </CRow>
 
 
             {/* Akses backend */}
-            <hr />
-            <ResponsiveNavLink method="post" href={route('logout')} as="button" active="true">
-                Log Out
-            </ResponsiveNavLink>
+
+
             {/* Akses backend */}
+
+
 
 
 
