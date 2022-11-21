@@ -11,11 +11,12 @@ export default function Dashboard() {
     return (
         <>
             <Head title='Dashboard' />
-            <CRow>
-                <CCol xs={'auto'} >
-                    <Sidebar />
+            <CRow className='container-fluid' >
+                <Sidebar />
+                <CCol  xs={'auto'} >
+
                 </CCol>
-                <CCol xs >
+                <CCol >
                     <Header get="Dashboad"/>
                     <div >
                         <h1>Halaman Dashboard</h1>

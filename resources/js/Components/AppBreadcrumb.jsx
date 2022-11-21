@@ -7,7 +7,7 @@ console.log(props);
 
     return (
         <>
-            <CBreadcrumb className=' className="m-0 ms-2"'>
+            <CBreadcrumb className='m-0 ms-2'>
                 <CBreadcrumbItem  >Home</CBreadcrumbItem>
                 <CBreadcrumbItem active>{title}</CBreadcrumbItem>
             </CBreadcrumb>

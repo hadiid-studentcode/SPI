@@ -12,6 +12,10 @@ import {
 } from '@coreui/react'
 
 import { Link } from '@inertiajs/inertia-react';
+import logo from '../../../public/Assets/img/Logo.png'
+
+import SimpleBar from 'simplebar-react'
+import 'simplebar/dist/simplebar.min.css'
 
 
 
@@ -22,15 +26,51 @@ export default function Sidebar() {
 
         <>
 
-            <CSidebar position='sticky'  >
-                <CSidebarBrand>Sidebar Brand</CSidebarBrand>
+            <CSidebar className='mb' position='sticky'  >
+                <CSidebarBrand className='d-none d-md-flex'  >
+                    <img src={logo} alt="" width={100} />
+                </CSidebarBrand>
                 <CSidebarNav>
-                    <CNavTitle>Nav Title</CNavTitle>
+                      <SimpleBar>
+                 <CNavTitle>Nav Title</CNavTitle>
                     <CNavItem component={Link} href="/dashboard">
 
                         <HiAcademicCap size={20} /> Dashboard
                     </CNavItem>
                     <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>
+                      <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
+
+                        With badge
+                        <CBadge color="primary ms-auto">NEW</CBadge>
+                    </CNavItem>  <CNavItem component={Link} href="/dashboard">
 
                         With badge
                         <CBadge color="primary ms-auto">NEW</CBadge>
@@ -44,8 +84,10 @@ export default function Sidebar() {
 
                         </CNavItem>
                     </CNavGroup>
+                 </SimpleBar>
                 </CSidebarNav>
-                <CSidebarToggler />
+
+                <CSidebarToggler className='sidebar-toggler' />
             </CSidebar>
         </>
     )
