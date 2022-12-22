@@ -20,7 +20,7 @@ export default function Header(props) {
     // const dispatch = useDispatch()
     // const sidebarShow = useSelector((state) => state.sidebarShow)
 
-    console.log(props.get);
+  
     const title = props.get;
 
     return (
